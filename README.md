@@ -102,14 +102,14 @@ ui <- fluidPage(\
   )\
 )
 
-server <- function(input, output) {\
-  formulaText <- reactive({\
+server <- function(input, output) {
+  formulaText <- reactive({
     paste("mpg ~", input$variable)\
   })\
-  output$caption <- renderText({\
+  output$caption <- renderText({
     formulaText()\
   })\
-  output$mpgPlot <- renderPlot({\
+  output$mpgPlot <- renderPlot({
     plot(as.formula(formulaText()),\
             data = mpgData,\
             outline = input$outliers,\
