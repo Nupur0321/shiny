@@ -94,8 +94,8 @@ ui <- fluidPage(\
                     "Gears" = "gear")),
       
     ),
-    mainPanel(\
-      h3(textOutput("caption")),\
+    mainPanel(
+      h3(textOutput("caption")),
       plotOutput("mpgPlot")
       
     )\
