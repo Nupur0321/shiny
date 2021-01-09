@@ -12,7 +12,7 @@ Modify this app to generate box plots around the species of the iris dataset. Ad
 
 Exercise 3\
 Run examples 1, 2 and 4 to help with this exercise\
-Write an app that will allow the user to select a variable from the mtcars data set. The app will then create a scatterplot of mpg against that selected variable.\ The user should also be able to change the point type in the app.
+Write an app that will allow the user to select a variable from the mtcars data set. The app will then create a scatterplot of mpg against that selected variable.The user should also be able to change the point type in the app.
 
 Exercise 4\
 Run examples 4 and 5 to help with this exercise.\
@@ -23,7 +23,7 @@ Create a shiny app that shows a plot pf the data in the mpg dataset (available i
 
 
 solution\
-(i)\
+(i)
 
 library(shiny)\
 ui <- fluidPage(\
@@ -46,7 +46,7 @@ shinyApp(ui, server)
 
 (ii)
 
-ui <- fluidPage(\
+ui <- fluidPage(
   titlePanel("Iris Data"),\
   sidebarLayout(\
     sidebarPanel(\
@@ -73,7 +73,7 @@ server <- function(input,output){\
             data = iris,\
             outline = input$setosa,\
             col = "#75AADB", pch = 19)\
-  })\
+  })
   
 }
 
