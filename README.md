@@ -140,12 +140,12 @@ ui <- fluidPage(\
     mainPanel(\
       plotOutput("mpgPlot")
       
-    )\
+    )
   )\
 )
 
-server <- function(input, output) {\
-  sliderValues <- reactive({\
+server <- function(input, output) {
+  sliderValues <- reactive({
     Value = as.character(c(input$points,\
                            input$xlim,\
                            input$ylim))\
