@@ -61,7 +61,7 @@ ui <- fluidPage(
   
 )
 
-server <- function(input,output){
+server <- function(input,output){\
   
   mydata <- reactive({iris[iris$Species == input$Species,]})\
   output$caption <- renderText({\
@@ -102,7 +102,7 @@ ui <- fluidPage(\
   )\
 )
 
-server <- function(input, output) {
+server <- function(input, output) {\
   formulaText <- reactive({
     paste("mpg ~", input$variable)\
   })\
