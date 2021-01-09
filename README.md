@@ -57,18 +57,18 @@ ui <- fluidPage(
     mainPanel(\
       h3(textOutput("caption")),\
       plotOutput("speciesplot")\
-    )\
+    )
   
 )
 
-server <- function(input,output){\
+server <- function(input,output){
   
   mydata <- reactive({iris[iris$Species == input$Species,]})\
   output$caption <- renderText({\
     mydata()\
   })
   
-  output$speciesplot <- renderPlot({\
+  output$speciesplot <- renderPlot({
     boxplot(as.formula(mydata()),\
             data = iris,\
             outline = input$setosa,\
