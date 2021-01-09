@@ -145,7 +145,7 @@ ui <- fluidPage(\
 )
 
 server <- function(input, output) {\
-  sliderValues <- reactive({
+  sliderValues <- reactive({\
     Value = as.character(c(input$points,\
                            input$xlim,\
                            input$ylim))\
